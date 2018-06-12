@@ -1,0 +1,23 @@
+// Apply the kotlin plugin to add support for Kotlin
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.2.41"
+}
+
+apply plugin: 'application'
+mainClassName = 'orange.mkat.rest.Main'
+applicationDefaultJvmArgs = ["-Xms512m", "-Xmx1g"] 
+
+// In this section you declare the dependencies for your production and test code
+repositories {
+    jcenter()
+}
+
+dependencies {
+  compile 'com.squareup.moshi:moshi:1.6.0'
+  compile 'com.squareup.moshi:moshi-adapters:1.6.0'
+  compile 'com.squareup.moshi:moshi-kotlin:1.6.0'
+  compile 'io.javalin:javalin:1.7.0'
+  compile 'org.slf4j:slf4j-simple:1.7.25'
+  compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+ 
